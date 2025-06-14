@@ -1,0 +1,193 @@
+/* Estilo geral do rodapé */
+.footer {
+  background-color: #003366; /* azul escuro */
+  color: white; /* texto branco */
+  padding: 40px 20px 20px; /* espaçamento interno: topo 40px, laterais 20px, baixo 20px */
+  font-family: arial; /* fonte usada no rodapé */
+}
+
+/* Limita a largura do conteúdo e centraliza */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex; /* lado a lado */
+  gap: 50px; /* espaçamento entre leftSide e rightSide */
+}
+
+/* LADO ESQUERDO */
+.leftSide {
+  flex: 1;
+  max-width: 350px; /* largura máxima para esse lado */
+}
+
+.logo {
+  max-height: 80px; /* limita a altura da logo */
+  margin-bottom: 20px;
+}
+
+.slogan {
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9); /* branco com leve transparência */
+  margin-bottom: 25px;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px; /* espaço entre ícones */
+}
+
+.socialIcon {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s; /* suaviza o efeito ao passar o mouse */
+}
+
+.socialIcon:hover {
+  transform: scale(1.1); /* aumenta levemente o ícone ao passar o mouse */
+}
+
+/* LADO DIREITO */
+.rightSide {
+  flex: 1; /* ocupa o mesmo espaço que o lado esquerdo */
+}
+
+.columnsWrapper {
+  display: flex; /* colunas lado a lado */
+  gap: 40px; /* espaço entre colunas */
+}
+
+.column {
+  flex: 1; /* cada coluna ocupa o mesmo espaço */
+}
+
+.columnTitle {
+  text-align: left;
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.underline {
+  height: 2px;
+  background-color: #0074d9; /* azul claro para destacar */
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.navList, .contactList {
+  list-style: none; /* remove bolinhas da lista */
+  padding: 0;
+  margin: 0;
+}
+
+.navList li, .contactList li {
+  padding: 8px 0; /* espaçamento vertical entre itens da lista */
+}
+
+.navList a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s; /* suaviza a mudança de cor no hover */
+}
+
+.navList a:hover {
+  color: #00aaff; /* muda a cor ao passar o mouse */
+}
+
+/* estiliza o formulário de contato como um container flexível em coluna */
+.contactForm {
+  display: flex; /* os elementos vão ficar um abaixo do outro */
+  flex-direction: column; /* direção da flexbox em coluna */
+  gap: 10px; /* espaçamento entre os elementos do formulário */
+}
+
+/* estiliza os campos de input e textarea */
+.contactForm input,
+.contactForm textarea {
+  padding: 10px; /* espaço interno para o conteúdo */
+  border: none; /* remove a borda padrão */
+  border-radius: 4px; 
+  font-size: 14px; 
+}
+
+/* estiliza o texto dos placeholders dos campos */
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
+  color: #999; /* cor cinza clara para o texto do placeholder */
+}
+
+/* eestiliza o botão de envio */
+.contactForm button {
+  padding: 10px; /* espaço interno */
+  background-color: #0074d9; 
+  color: white; 
+  border: none; /* remove a borda */
+  border-radius: 4px; /* cantos arredondados */
+  font-weight: bold; /* texto em negrito */
+  cursor: pointer; /* cursor em forma de mãozinha ao passar por cima */
+  transition: background-color 0.3s; /* suaviza a transição da cor */
+}
+
+/* Estiliza o botão quando o mouse está em cima */
+.contactForm button:hover {
+  background-color: #005fa3; /* muda o tom do azul no hover */
+}
+
+/* Texto de direitos autorais no fim */
+.copyright {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* linha sutil acima */
+  color: rgba(255, 255, 255, 0.8); /* branco com transparência */
+  font-size: 14px;
+}
+
+
+
+
+
+/* RESPONSIVIDADE: telas menores que 768px */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* empilha os blocos em vez de lado a lado */
+    gap: 40px;
+  }
+
+  .leftSide {
+    max-width: 100%;
+    text-align: center; /* centraliza conteúdo */
+  }
+
+  .socialIcons {
+    justify-content: center; /* centraliza ícones */
+  }
+
+  .columnsWrapper {
+    flex-direction: column; /* empilha as colunas */
+    gap: 30px;
+  }
+
+  .columnTitle {
+    font-size: 18px; /* diminui o tamanho do título */
+  }
+}
+
+
+/* RESPONSIVIDADE – ajuste para telas menores que 600px */
+@media (max-width: 600px) {
+  .contactForm {
+    gap: 8px;
+  }
+
+  .contactForm input,
+  .contactForm textarea {
+    font-size: 13px;
+  }
+
+  .contactForm button {
+    font-size: 14px;
+    padding: 9px;
+  }
+}
